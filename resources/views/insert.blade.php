@@ -1,46 +1,35 @@
-<?php
-//insert.php
-if(!empty($_POST))
-{
- $output = '';
-    $name = mysqli_real_escape_string($connect, $_POST["nama"]);  
-    $alamat = mysqli_real_escape_string($connect, $_POST["jenis"]);  
-    $gender = mysqli_real_escape_string($connect, $_POST["kode"]);  
-    $umur = mysqli_real_escape_string($connect, $_POST["jumlah"]);
-    $query = "
-    INSERT INTO barang(nama, jenis, kode, jumalh)  
-     VALUES('$name', '$jenis', '$kode', '$jumlah')
-    ";
-    if(mysqli_query($connect, $query))
-    {
-     $output .= '<label class="text-success">Data Berhasil Masuk</label>';
-     $select_query = "SELECT * FROM barang ORDER BY id DESC";
-     $result = mysqli_query($connect, $select_query);
-     $output .= '
-      <table class="table table-bordered">  
-                    <tr>  
-                         <th width="55%">Nama Barang</th>  
-                         <th width="15%">Lihat</th>  
-                         <th width="15%">Edit</th>  
-                         <th width="15%">Hapus</th>  
-                    </tr>
-     ';
-     while($row = mysqli_fetch_array($result))
-     {
-      $output .= '
-       <tr>  
-                         <td>' . $row["nama"] . '</td>  
-                         <td><input type="button" name="view" value="Lihat Detail" id="' . $row["id"] . '" class="btn btn-info btn-xs view_data" /></td>  
-                         <td><input type="button" name="edit" value="Edit" id="' . $row["id"] . '" class="btn btn-warning btn-xs edit_data" /></td>       
-                         <td><input type="button" name="delete" value="Hapus" id="' . $row["id"] . '" class="btn btn-danger btn-xs hapus_data" /></td>
-                  
-                    </tr>
-      ';
-     }
-     $output .= '</table>';
-    }else{
-        $output .= mysqli_error($connect);
-    }
-    echo $output;
-}
-?>
+<!DOCTYPE html>  
+<html>  
+ <head>  
+  <title>input data</title>  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />  
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>  
+ </head>  
+ <body> 
+          <div class="modal-body">
+           <form method="post" id="insert_form">
+            <label>Nama Barang</label>
+            <input type="text" name="nama" id="nama" class="form-control" />
+            <br />
+            <label>Jenis Barang</label>
+            <textarea name="jenis" id="jenis" class="form-control"></textarea>
+            <br />
+            <label>Kode Barang</label>
+            <textarea name="kode" id="kode" class="form-control"></textarea>
+            <br />  
+            <label>Jumlah Barang</label>
+            <input type="text" name="jumlah" id="jumalh" class="form-control" />
+            <br />
+            <input type="submit" name="insert" id="insert" value="Insert" class="btn btn-success" />
+        
+           </form>
+          </div>
+          <div class="modal-footer">
+           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+         </div>
+        </div>
+       </div>
+ </body>  
+</html>  

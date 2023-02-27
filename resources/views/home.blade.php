@@ -35,8 +35,8 @@
         <div class="container">
             <div class="navbar-nav">
                 <a class="nav-link active" aria-current="page" href="home.php">Home</a>
-                <a class="nav-link active" href="data_brg.php">Data Barang</a>
-                <a class="nav-link active" href="logout.php">Logout</a>
+                <a class="nav-link active">Data Barang</a>
+                <a class="nav-link active">Logout</a>
             </div>
             </div>
         </div>

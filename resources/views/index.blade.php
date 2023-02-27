@@ -18,10 +18,52 @@
      <table class="table table-bordered">
       <tr>
        <th width="55%">Nama Barang</th>  
-       <th width="15%">Lihat Detail</th>
+       <th width="15%">Kode</th>
+       <th width="15%">jumlah barang</th>
        <th width="15%">Edit</th>
        <th width="15%">Hapus</th>
       </tr>
+      
+      <tr class="table-info">
+        <th>buku</th>
+        <td>b001</td>
+        <td>201</td>
+        <td><button type="button" class="btn btn-warning">edit</button></td>
+        <td><button type="button" class="btn btn-danger">hapus</button></td>
+      </tr>
+
+    <tr class="table-info">
+        <th>buku</th>
+        <td>b001</td>
+        <td>100</td>
+        <td><button type="button" class="btn btn-warning">edit</button></td>
+        <td><button type="button" class="btn btn-danger">hapus</button></td>
+      </tr>
+
+    <tr class="table-info">
+        <th>buku</th>
+        <td>b001</td>
+        <td>500</td>
+        <td><button type="button" class="btn btn-warning">edit</button></td>
+        <td><button type="button" class="btn btn-danger">hapus</button></td>
+      </tr>
+
+    <tr class="table-info">
+        <th>buku</th>
+        <td>b001</td>
+        <td>20</td>
+        <td><button type="button" class="btn btn-warning">edit</button></td>
+        <td><button type="button" class="btn btn-danger">hapus</button></td>
+      </tr>
+
+    <tr class="table-info">
+        <th>buku</th>
+        <td>b001</td>
+        <td>12</td>
+        <td><button type="button" class="btn btn-warning">edit</button></td>
+        <td><button type="button" class="btn btn-danger">hapus</button></td>
+      </tr>
+
      </table>
     </div>
    </div> 
